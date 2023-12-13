@@ -1,5 +1,4 @@
-// import { dinnerForVegetarian, dinnerForFourOrLess, dinnerForFiveOrMore } from "./js/dinnerData";
-
+// import { dinnerForVegetarian, dinnerForFourOrLess, dinnerForFiveOrMore } from './dinnerData.js'
 const btn = document.getElementById("btn")
 const num = document.getElementById("num-input")
 const vegetarian = document.getElementById("vegetarian-input")
@@ -12,7 +11,11 @@ const dinnerForVegetarian = [
       {
         name: "Main Course",
         dishes: [
-          { name: "Stuffed Bell Peppers with Quinoa and Black Beans", description: "Bell peppers filled with a savory mixture of quinoa, black beans, corn, and spices, baked to perfection." }
+          { 
+            name: "Stuffed Bell Peppers with Quinoa and Black Beans", 
+            description: "Bell peppers filled with a savory mixture of quinoa, black beans, corn, and spices, baked to perfection.",
+            URL: "https://jessicainthekitchen.com/easy-quinoa-stuffed-peppers-tex-mex-style/" 
+            }
         ]
       },
       {
@@ -36,7 +39,10 @@ const dinnerForVegetarian = [
       {
         name: "Main Course",
         dishes: [
-          { name: "Mushroom and Spinach Spanakopita", description: "Layers of phyllo dough filled with a flavorful mixture of mushrooms, spinach, and feta cheese." }
+          { 
+            name: "Mushroom and Spinach Spanakopita", 
+            description: "Layers of phyllo dough filled with a flavorful mixture of mushrooms, spinach, and feta cheese.",
+            URL: "https://savoryandsavvy.com/recipe/spinach-and-mushroom-spanakopita/"  }
         ]
       },
       {
@@ -60,7 +66,10 @@ const dinnerForVegetarian = [
       {
         name: "Main Course",
         dishes: [
-          { name: "Winter Vegetable Wellington", description: "A flaky puff pastry filled with a medley of winter vegetables such as butternut squash, Brussels sprouts, and carrots, seasoned with herbs and goat cheese." }
+          { 
+            name: "Winter Vegetable Wellington", 
+            description: "A flaky puff pastry filled with a medley of winter vegetables such as butternut squash, Brussels sprouts, and carrots, seasoned with herbs and goat cheese.",
+            URL: "https://www.makeitgrateful.com/living/celebrate/thanksgiving/vegetables-wellington-is-a-beautiful-vegetarian-main-dish-option-for-the-holidays/" }
         ]
       },
       {
@@ -87,7 +96,10 @@ const dinnerForFourOrLess = [
       {
         name: "Main Course",
         dishes: [
-          { name: "Beef and Mushroom Stew", description: "Hearty beef stew with mushrooms, carrots, and potatoes, slow-cooked for a rich flavor." }
+          { 
+            name: "Beef and Mushroom Stew", 
+            description: "Hearty beef stew with mushrooms, carrots, and potatoes, slow-cooked for a rich flavor.",
+            URL: "https://anitalianinmykitchen.com/beef-mushroom-stew/" }
         ]
       },
       {
@@ -111,7 +123,10 @@ const dinnerForFourOrLess = [
       {
         name: "Main Course",
         dishes: [
-          { name: "Herb-Crusted Rack of Lamb", description: "Elegant rack of lamb coated with a flavorful herb crust and roasted to perfection." }
+          { 
+            name: "Herb-Crusted Rack of Lamb", 
+            description: "Elegant rack of lamb coated with a flavorful herb crust and roasted to perfection.",
+            URL: "https://www.myrecipes.com/recipe/herb-crusted-rack-lamb" }
         ]
       },
       {
@@ -135,7 +150,10 @@ const dinnerForFourOrLess = [
       {
         name: "Main Course",
         dishes: [
-          { name: "Lemon Herb Grilled Chicken", description: "Chicken marinated in a zesty lemon and herb mixture, grilled to perfection." }
+          { 
+            name: "Lemon Herb Grilled Chicken", 
+            description: "Chicken marinated in a zesty lemon and herb mixture, grilled to perfection.",
+            URL: "https://www.thechunkychef.com/lemon-herb-grilled-chicken/" }
         ]
       },
       {
@@ -162,7 +180,10 @@ const dinnerForFiveOrMore = [
       {
         name: "Main Course",
         dishes: [
-          { name: "Roast Beef Tenderloin", description: "A succulent beef tenderloin roast seasoned with rosemary and garlic." }
+          { 
+            name: "Roast Beef Tenderloin", 
+            description: "A succulent beef tenderloin roast seasoned with rosemary and garlic.",
+            URL: "https://www.bonappetit.com/recipe/roast-beef-tenderloin-with-garlic-and-rosemary" }
         ]
       },
       {
@@ -186,7 +207,10 @@ const dinnerForFiveOrMore = [
       {
         name: "Main Course",
         dishes: [
-          { name: "Lemon Herb Baked Salmon", description: "Salmon fillets baked with a lemon-herb marinade for a fresh and light main course." }
+          { 
+            name: "Lemon Herb Baked Salmon", 
+            description: "Salmon fillets baked with a lemon-herb marinade for a fresh and light main course.",
+            URL: "https://whitneybond.com/whats-for-dinner-lemon-herb-salmon/" }
         ]
       },
       {
@@ -210,7 +234,10 @@ const dinnerForFiveOrMore = [
       {
         name: "Main Course",
         dishes: [
-          { name: "Osso Buco", description: "Braised veal shanks cooked in a flavorful tomato and wine sauce." }
+          { 
+            name: "Osso Buco", 
+            description: "Braised veal shanks cooked in a flavorful tomato and wine sauce.",
+            URL: "https://juliasalbum.com/osso-buco-braised-veal-shanks/" }
         ]
       },
       {
@@ -234,7 +261,10 @@ const dinnerForFiveOrMore = [
       {
         name: "Main Course",
         dishes: [
-          { name: "Cranberry Glazed Turkey Breast", description: "Succulent turkey breast glazed with a sweet and tangy cranberry sauce, roasted to perfection." }
+          { 
+            name: "Cranberry Glazed Turkey Breast", 
+            description: "Succulent turkey breast glazed with a sweet and tangy cranberry sauce, roasted to perfection.",
+            URL: "https://cravingtasty.com/cranberry-glazed-turkey-breast/" }
         ]
       },
       {
@@ -275,10 +305,13 @@ btn.addEventListener("click", () => {
   }
 
   console.log("Selected dinner:", selectedDinner.title)
+  
+  const dishNameLink = `<a href="${selectedDinner.sections[0].dishes[0].URL}" target="_blank">${selectedDinner.sections[0].dishes[0].name}</a>`
 
   food.innerHTML = `
     <h2>${selectedDinner.title}:</h2>
-    <p>${selectedDinner.sections[0].dishes[0].name}
+    
+    <p>${dishNameLink}
     <span class="txt-sm">${selectedDinner.sections[0].dishes[0].description}</span></p>
     <br>
     <p>Served with ${selectedDinner.sections[1].dishes[0].name} and 
@@ -288,9 +321,3 @@ btn.addEventListener("click", () => {
     <span class="txt-sm">${selectedDinner.sections[2].dishes[0].description}</span></p>
   `
 })
-
-/*
-Task:
-Stretch goals:
-- Show recipes when the meal has been selected.
- */
