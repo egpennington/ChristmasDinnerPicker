@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Christmas Dinner Picker">
+        <meta name="keywords" content="HTML, CSS, JavaScript, Scrimba, JavaScrimptas">
+        <meta name="author" content="pennington programming">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Christmas Dinner Picker</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Mountains+of+Christmas:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body>
+        <h1>Christmas Dinner Picker</h1>
+        <p class="result" id="result">Your ideal Christmas dinner is <span id="food">...</span></p>
+        <form>
+            <label for="name">How many guests are coming?</label>
+            <input id="num-input" type="number" id="guests" name="guests">
+            <div class="veggie">
+                <input type="checkbox" id="vegetarian-input" name="vegetarian" checked>
+                <label for="name">Vegetarian?</label>            
+            </div>
+            <button id="btn" type="button">Calculate</button>
+        </form>
+        
+        <script src="/js/main.js" type="module"></script>
+    </body>
+</html>
