@@ -252,3 +252,7 @@ const dinnerForFiveOrMore = [
       ]
     }
 ];
+
+export  { dinnerForVegetarian }
+export  { dinnerForFourOrLess }
+export  { dinnerForFiveOrMore }
